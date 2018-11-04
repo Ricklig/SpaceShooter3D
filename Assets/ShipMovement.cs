@@ -10,9 +10,6 @@ public class ShipMovement : MonoBehaviour {
     public Transform x1gun;
     public Transform x2gun;
     public Transform fgun;
-    public Sprite ywing;
-    public Sprite xwing;
-    public Sprite falcon;
     public int level = 1;
     public float velocity = 100.0f;
 
@@ -54,8 +51,27 @@ public class ShipMovement : MonoBehaviour {
 
     void Fire()
     {
+        if (level == 1)
+        {
             GameObject newBullet = Instantiate(bullet, ygun.position, ygun.rotation);
             newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * velocity, ForceMode.VelocityChange);
+        }
+        if (level == 2)
+        {
+            GameObject newBullet = Instantiate(bullet, x1gun.position, x1gun.rotation);
+            newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * velocity, ForceMode.VelocityChange);
+            GameObject newBullet2 = Instantiate(bullet, x2gun.position, x2gun.rotation);
+            newBullet2.GetComponent<Rigidbody>().AddForce(transform.forward * velocity, ForceMode.VelocityChange);
+        }
+        if (level == 3)
+        {
+            GameObject newBullet = Instantiate(bullet, fgun.position, fgun.rotation);
+            newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * velocity, ForceMode.VelocityChange);
+            GameObject newBullet2 = Instantiate(bullet, fgun.position, Quaternion.AngleAxis(25, Vector3.forward));
+            newBullet2.GetComponent<Rigidbody>().AddForce(transform.forward * velocity, ForceMode.VelocityChange);
+            GameObject newBullet3 = Instantiate(bullet, fgun.position, Quaternion.AngleAxis(-25, Vector3.forward));
+            newBullet3.GetComponent<Rigidbody>().AddForce(transform.forward * velocity, ForceMode.VelocityChange);
+        }
     }
 
     public void TakeDamage()
