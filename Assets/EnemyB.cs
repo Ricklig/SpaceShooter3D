@@ -7,7 +7,8 @@ public class EnemyB : MonoBehaviour {
     float CurveSpeed = 5;
     float MoveSpeed = 2;
     float fTime = 50;
-    float runTime = 3.0f;
+    float runTime = 0f;
+    bool shoot = false;
     
     public GameObject bulletPrefab;
     public Transform gun;
@@ -25,31 +26,44 @@ public class EnemyB : MonoBehaviour {
 
     {
 
-        if (runTime > 5)
+        if (runTime < 4)
         {
-            runTime -= Time.deltaTime;
-            transform.Translate(5f * Time.deltaTime,0.0f, 0.0f);
+            runTime += Time.deltaTime;
+            transform.Translate(10f * Time.deltaTime,0.0f, 0.0f);
         }
-        else if(runTime > 7)
+        else if(runTime < 6)
         {
-            runTime -= Time.deltaTime;
-            transform.Translate(0.0f, 5f * Time.deltaTime, 0.0f);
+            runTime += Time.deltaTime;
+            transform.Translate(0.0f,0.0f, 8f * Time.deltaTime);
         }
-        else if (runTime > 12)
+        else if (runTime < 10)
         {
-            runTime -= Time.deltaTime;
-            transform.Translate(-5f * Time.deltaTime, 0.0f, 0.0f);
+            shoot = true;
+            runTime += Time.deltaTime;
+            transform.Translate(-10f * Time.deltaTime, 0.0f, 0.0f);
+        }
+        else if (runTime < 12)
+        {
+            shoot = false;
+            runTime += Time.deltaTime;
+            transform.Translate(0.0f, 0.0f, 8f * Time.deltaTime);
+        }
+        else if (runTime < 16)
+        {
+            shoot = true;
+            runTime += Time.deltaTime;
+            transform.Translate(5f * Time.deltaTime, 0.0f, 0.0f);
         }
 
         shotsFired -= Time.deltaTime;
-        if(shotsFired < 0)
+        if(shotsFired < 0 && shoot)
         {
             Fire();
             shotsFired = 2.0f;
         }
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter(Collider col)
     {
 
         if (col.gameObject.layer.Equals(14))
@@ -57,22 +71,27 @@ public class EnemyB : MonoBehaviour {
 
             Destroy(col.gameObject);
             gameObject.GetComponentInParent<EnemyBManager>().sendPos(gameObject.transform.position);
-            GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(200);
-            Destroy(gameObject);
+            //GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
+            transform.rotation = Quaternion.Euler(0, -1, 0);
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
 
         else if (col.gameObject.layer.Equals(9))
         {
-            
+
             gameObject.GetComponentInParent<EnemyBManager>().noBonus();
             Destroy(gameObject);
         }
 
         else if (col.gameObject.layer.Equals(11))
         {
-            
+
             col.gameObject.GetComponent<ShipMovement>().TakeDamage();
             gameObject.GetComponentInParent<EnemyBManager>().noBonus();
+            Destroy(gameObject);
+        }
+        else if (col.gameObject.layer.Equals(4))
+        {
             Destroy(gameObject);
         }
     }
@@ -83,17 +102,8 @@ public class EnemyB : MonoBehaviour {
         float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
         Quaternion q = Quaternion.AngleAxis(angle + 90, Vector3.forward);
         var bullet = (GameObject)Instantiate(bulletPrefab, gun.position, q );
+        bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 10, ForceMode.VelocityChange);
 
-    }
-
-    IEnumerator MoveSin()
-    {
-
-        yield return new WaitForSeconds(0);
-        fTime += Time.deltaTime * CurveSpeed;
-        Vector3 vSin = new Vector3(Mathf.Sin(fTime) * 7, 0, 0);
-        Vector3 vLin = new Vector3(0, -MoveSpeed, 0);
-        transform.position += (vSin + vLin) * Time.deltaTime;
     }
 
 }
