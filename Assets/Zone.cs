@@ -14,13 +14,14 @@ public class Zone : MonoBehaviour {
 	void Update () {
 		if (hp == 0)
         {
-            //gameObject.GetComponentInParent<Boss>().zoneDestroy();
+            gameObject.GetComponentInParent<Boss>().zoneDestroy();
             Destroy(gameObject);
         }
 	}
 
     void OnTriggerEnter(Collider col)
     {
+        Debug.Log("hit");
 
         if (col.gameObject.layer.Equals(14))
         {
