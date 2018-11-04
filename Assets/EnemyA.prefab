@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4733187300794606}
   - component: {fileID: 33403437006421612}
   - component: {fileID: 23162920530267868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Foot_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4289352224698540}
   - component: {fileID: 33926042880540786}
   - component: {fileID: 23150481376473714}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TpH_Glas_blackred
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4343269965788064}
   - component: {fileID: 33222677862816102}
   - component: {fileID: 23343250810607908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_HubDet_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4002887643349706}
   - component: {fileID: 33985687159363498}
   - component: {fileID: 23902957561803634}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TpH_Det_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4547082763942488}
   - component: {fileID: 33144055890035836}
   - component: {fileID: 23575696035245764}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CanoRing_mid_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4147004232477300}
   - component: {fileID: 33714666927248124}
   - component: {fileID: 23566996398545174}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Rim_US_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4503955194208716}
   - component: {fileID: 33940040967902708}
   - component: {fileID: 23031682053721468}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SeamRims_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4446832038054164}
   - component: {fileID: 33956694746955528}
   - component: {fileID: 23292930329843352}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Boot_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 4794910201598076}
   - component: {fileID: 33561779415987074}
   - component: {fileID: 23561823724506732}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Mesh_rib_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 4900353076073228}
   - component: {fileID: 33579047463839496}
   - component: {fileID: 23263233924432096}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_US_Arm_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 4215453418873020}
   - component: {fileID: 33772474664113100}
   - component: {fileID: 23254459992839166}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_US_Hub_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 4513186205995506}
   - component: {fileID: 33983099601244244}
   - component: {fileID: 23919677085903736}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_US_Nut_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 4386519268267896}
   - component: {fileID: 33507757323405140}
   - component: {fileID: 23465486366835750}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Mesh_rib_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 4171084020115336}
   - component: {fileID: 33540882087019804}
   - component: {fileID: 23720399031074170}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_US_Hub_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 4461337648499918}
   - component: {fileID: 33502051257719486}
   - component: {fileID: 23142701624649896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tp_Hatch_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 4200707460245624}
   - component: {fileID: 33735699405252696}
   - component: {fileID: 23330966721376694}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Boot_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 4810565857666840}
   - component: {fileID: 33545796007129982}
   - component: {fileID: 23664258634709118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hinge_US_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 4759500836918720}
   - component: {fileID: 33998758312565914}
   - component: {fileID: 23887582519771216}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BakHring_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 4944396169865286}
   - component: {fileID: 33239357133867128}
   - component: {fileID: 23649944098769570}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Pan_US_panl_blk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 4553708932385438}
   - component: {fileID: 33692743829264354}
   - component: {fileID: 23696495428953604}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_US_Nut_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 4300187259107112}
   - component: {fileID: 33958454673355802}
   - component: {fileID: 23861664849975776}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BakHglas_blackred
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 4945478234809248}
   - component: {fileID: 33432734256231936}
   - component: {fileID: 23421937420196828}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Rim_US_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 4193980864627716}
   - component: {fileID: 33564285700407238}
   - component: {fileID: 23328587276199468}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnginGlo_englored
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 114859761734354366}
   - component: {fileID: 65772928685412036}
   - component: {fileID: 54970871223405482}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 4474211870325102}
   - component: {fileID: 33295529810798974}
   - component: {fileID: 23122574258608454}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_SpkDet_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 4709345203776036}
   - component: {fileID: 33524020663130792}
   - component: {fileID: 23529493260672726}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HulPlats_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 4130440438508420}
   - component: {fileID: 33387405161931158}
   - component: {fileID: 23370184012343546}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Pan_US_panl_blk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 4565113738165448}
   - component: {fileID: 33817676748477704}
   - component: {fileID: 23075257217240020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bak_Hatc_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 4436932915444236}
   - component: {fileID: 33529607885558154}
   - component: {fileID: 23228997805840026}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MainHull_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 4838343269257288}
   - component: {fileID: 33860540007485780}
   - component: {fileID: 23007652008196814}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_HubDet_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 4871589151784472}
   - component: {fileID: 33147836459512640}
   - component: {fileID: 23696325455175988}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Foot_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 4144284211421482}
   - component: {fileID: 33460441956139532}
   - component: {fileID: 23589195272291882}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_US_Arm_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 4513344160611966}
   - component: {fileID: 33882251524392324}
   - component: {fileID: 23288971746312710}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HulTensn_drk_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,7 +583,7 @@ GameObject:
   - component: {fileID: 4308267530223784}
   - component: {fileID: 33224480039796224}
   - component: {fileID: 23473109472826250}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bak_Hdet_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 4327158215754740}
   - component: {fileID: 33145759433049300}
   - component: {fileID: 23296758656188570}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HulBottm_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 4155385094630966}
   - component: {fileID: 33043712029317836}
   - component: {fileID: 23351022733057432}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Wng_US_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 4886995281242394}
   - component: {fileID: 33001290745826504}
   - component: {fileID: 23512528280598040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Ribs_rib_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 4771134972269596}
   - component: {fileID: 33725297948860772}
   - component: {fileID: 23465062819153468}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Ribs_rib_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 4607807754579512}
   - component: {fileID: 33974657496766608}
   - component: {fileID: 23290342707521576}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Wng_US_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 4758985624914870}
   - component: {fileID: 33183945375455006}
   - component: {fileID: 23025645341286164}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BakPanls_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 4756747843826240}
   - component: {fileID: 33820056623166332}
   - component: {fileID: 23077590228876738}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LaserTip_lasered
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: 4200343226346566}
   - component: {fileID: 33938809809764974}
   - component: {fileID: 23100061778185912}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Windscrn_blackred
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 4415704414703362}
   - component: {fileID: 33406109762000422}
   - component: {fileID: 23389122075047738}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bulkhead_mid_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 4198426940633056}
   - component: {fileID: 33839664060919118}
   - component: {fileID: 23955460009094522}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_US_Cuf_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 4260884430164170}
   - component: {fileID: 33038547546653630}
   - component: {fileID: 23395410790907102}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_SpkDet_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 4485605968954740}
   - component: {fileID: 33014232981511164}
   - component: {fileID: 23830132226567140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canopy_mid_gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 4239974827888778}
   - component: {fileID: 33882387659479100}
   - component: {fileID: 23272101827627108}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_US_Cuf_hullblue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3422,7 +3422,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1507793977415872}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 6.5, y: 9, z: 7}

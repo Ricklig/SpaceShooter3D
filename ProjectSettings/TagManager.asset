@@ -14,12 +14,12 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Destroy
+  - Enemy
+  - Player
+  - Bonus
+  - BadBullet
+  - GoodBullet
   - 
   - 
   - 

@@ -11,19 +11,19 @@ public class EnemyA : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 movement = new Vector3(0.0f,  0.0f,-3*Time.deltaTime);
+        Vector3 movement = new Vector3(0.0f,  0.0f,3*Time.deltaTime);
         transform.Translate(movement); 
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter(Collider col)
     {
 
-        if (col.gameObject.layer.Equals(8))
+        if (col.gameObject.layer.Equals(14))
         {
 
             Destroy(col.gameObject);
             gameObject.GetComponentInParent<EnemyAManager>().sendPos(gameObject.transform.position);
-            GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
+            //GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
             Destroy(gameObject);
         }
 
