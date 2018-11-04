@@ -285,9 +285,9 @@ MonoBehaviour:
   bossClock: 30
   aSetClock: 8
   bSetClock: 12
-  bossA: {fileID: 1254293120737150, guid: 0c76e2b7db20aa64eaed1ef6e003a833, type: 2}
+  bossA: {fileID: 1324052181439916, guid: 863f261a3a0cb6a44aa9be3bf119a90d, type: 2}
   bossSpawn: {fileID: 812574718}
-  enemyA: {fileID: 1254293120737150, guid: 0c76e2b7db20aa64eaed1ef6e003a833, type: 2}
+  enemyA: {fileID: 1611857355816778, guid: e1783e4e6b1de4d4bb7ab2eb31b9c9d6, type: 2}
   spawnA:
   - {fileID: 2037918032}
   - {fileID: 657919545}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 770888920}
   m_Layer: 0
   m_Name: Gameplay Plane
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -758,13 +758,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 812574717}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: -56, z: 40}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 12, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 71466836}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &815286175
 GameObject:
   m_ObjectHideFlags: 0

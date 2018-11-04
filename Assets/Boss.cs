@@ -51,6 +51,8 @@ public class Boss : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        startPos.z = transform.position.z;
+
         if (startTime > 0)
         {
             startTime -= Time.deltaTime;

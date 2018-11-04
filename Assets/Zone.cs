@@ -19,10 +19,10 @@ public class Zone : MonoBehaviour {
         }
 	}
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter(Collider col)
     {
 
-        if (col.gameObject.layer.Equals(8))
+        if (col.gameObject.layer.Equals(14))
         {
 
             Destroy(col.gameObject);
@@ -32,7 +32,7 @@ public class Zone : MonoBehaviour {
         else if (col.gameObject.layer.Equals(11))
         {
 
-            //col.gameObject.GetComponent<PlayerMove>().TakeDamage();
+            col.gameObject.GetComponent<ShipMovement>().TakeDamage();
         }
     }
 }

@@ -41,7 +41,8 @@ public class GameManager : MonoBehaviour {
             bossClock -= Time.deltaTime;
 		    if (bossClock < 0)
             {
-                var boss = (GameObject)Instantiate(bossA, bossSpawn.position, bossSpawn.rotation);
+                StartCoroutine(SpawnBoss());
+                
             }
         }
 
@@ -96,6 +97,12 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(0);
         int spawnPointIndex = Random.Range(0, spawnB.Length);
         var enemy = (GameObject)Instantiate(enemyB, spawnB[spawnPointIndex].position, spawnB[spawnPointIndex].rotation);
+    }
+    IEnumerator SpawnBoss()
+    {
+        yield return new WaitForSeconds(10);
+        var boss = (GameObject)Instantiate(bossA, bossSpawn.position, bossSpawn.rotation);
+
     }
     IEnumerator fnishScene()
     {
