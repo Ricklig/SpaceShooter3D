@@ -13,7 +13,7 @@ public class EnemyB : MonoBehaviour {
     public GameObject bulletPrefab;
     public Transform gun;
 
-    float shotsFired = 2.0f;
+    float shotsFired = 4.0f;
     
 
     // Use this for initialization
@@ -33,6 +33,8 @@ public class EnemyB : MonoBehaviour {
         }
         else if(runTime < 6)
         {
+            shoot = false;
+            shotsFired = 2.25f;
             runTime += Time.deltaTime;
             transform.Translate(0.0f,0.0f, 8f * Time.deltaTime);
         }
@@ -45,6 +47,7 @@ public class EnemyB : MonoBehaviour {
         else if (runTime < 12)
         {
             shoot = false;
+            shotsFired = 2.0f;
             runTime += Time.deltaTime;
             transform.Translate(0.0f, 0.0f, 8f * Time.deltaTime);
         }
@@ -72,7 +75,7 @@ public class EnemyB : MonoBehaviour {
             Destroy(col.gameObject);
             gameObject.GetComponentInParent<EnemyBManager>().sendPos(gameObject.transform.position);
             //GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
-            transform.rotation = Quaternion.Euler(0, -1, 0);
+            //transform.rotation = Quaternion.Euler(0, 0 ,);
             gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
 
@@ -99,10 +102,12 @@ public class EnemyB : MonoBehaviour {
     void Fire()
     {
         Vector3 vectorToTarget = GameObject.FindWithTag("Player").GetComponent<Transform>().position - gameObject.transform.position;
-        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-        Quaternion q = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+        Vector3 facingDirection = transform.forward; // just for clarity!
+
+        float angleInDegrees = Vector3.Angle(facingDirection, vectorToTarget);
+        Quaternion q = Quaternion.FromToRotation(facingDirection, vectorToTarget);
         var bullet = (GameObject)Instantiate(bulletPrefab, gun.position, q );
-        bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 10, ForceMode.VelocityChange);
+        bullet.GetComponent<Rigidbody>().AddForce(vectorToTarget * 0.5f, ForceMode.VelocityChange);
 
     }
 
