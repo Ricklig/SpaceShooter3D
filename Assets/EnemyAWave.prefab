@@ -54,4 +54,4 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1507793977415872, guid: 0a7fd33caab625d4791d5a7ca2b2ec3c,
     type: 2}
   alive: 5
-  bonusDrop: {fileID: 0}
+  bonusDrop: {fileID: 1079521271110842, guid: 1cd4bf672daf21342ba0060a5ec7d7d6, type: 2}

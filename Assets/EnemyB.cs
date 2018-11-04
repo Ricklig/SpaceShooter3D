@@ -25,14 +25,20 @@ public class EnemyB : MonoBehaviour {
 
     {
 
-        if (runTime > 0.5)
+        if (runTime > 5)
         {
             runTime -= Time.deltaTime;
-            transform.Translate(-5f * Time.deltaTime, 1 * Time.deltaTime, 0.0f);
+            transform.Translate(5f * Time.deltaTime,0.0f, 0.0f);
         }
-        else
+        else if(runTime > 7)
         {
-            StartCoroutine(MoveSin());
+            runTime -= Time.deltaTime;
+            transform.Translate(0.0f, 5f * Time.deltaTime, 0.0f);
+        }
+        else if (runTime > 12)
+        {
+            runTime -= Time.deltaTime;
+            transform.Translate(-5f * Time.deltaTime, 0.0f, 0.0f);
         }
 
         shotsFired -= Time.deltaTime;
@@ -65,7 +71,7 @@ public class EnemyB : MonoBehaviour {
         else if (col.gameObject.layer.Equals(11))
         {
             
-            //col.gameObject.GetComponent<PlayerMove>().TakeDamage();
+            col.gameObject.GetComponent<ShipMovement>().TakeDamage();
             gameObject.GetComponentInParent<EnemyBManager>().noBonus();
             Destroy(gameObject);
         }

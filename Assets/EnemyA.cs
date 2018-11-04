@@ -24,7 +24,8 @@ public class EnemyA : MonoBehaviour {
             Destroy(col.gameObject);
             gameObject.GetComponentInParent<EnemyAManager>().sendPos(gameObject.transform.position);
             //GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
-            Destroy(gameObject);
+            transform.rotation = Quaternion.Euler(0, -1, 0);
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
 
         else if (col.gameObject.layer.Equals(9))
@@ -37,9 +38,13 @@ public class EnemyA : MonoBehaviour {
         else if (col.gameObject.layer.Equals(11))
         {
             
-            //col.gameObject.GetComponent<PlayerShip>().TakeDamage();
-            //gameObject.GetComponentInParent<EnemyAManager>().noBonus();
-            //Destroy(gameObject);
+            col.gameObject.GetComponent<ShipMovement>().TakeDamage();
+            gameObject.GetComponentInParent<EnemyAManager>().noBonus();
+            Destroy(gameObject);
+        }
+        else if (col.gameObject.layer.Equals(4))
+        {
+            Destroy(gameObject);
         }
     }
 

@@ -9,7 +9,8 @@ public class ShipMovement : MonoBehaviour {
     public Transform ygun;
     public Transform x1gun;
     public Transform x2gun;
-    public Transform fgun;
+    public Transform f1gun;
+    public Transform f2gun;
     public int level = 1;
     public float velocity = 100.0f;
 
@@ -27,16 +28,27 @@ public class ShipMovement : MonoBehaviour {
 
         Move();
         if (Input.GetButtonDown("Fire1"))
+            {
+                Fire();
+            }
+        }
+
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.layer.Equals(13))
         {
-            Fire();
-        }
-
-
-
-
+            Destroy(col.gameObject);
+            TakeDamage();
 
         }
 
+        else if (col.gameObject.layer.Equals(12))
+        {
+            Destroy(col.gameObject);
+            LevelUp();
+        }
+    }
 
 
     void Move() {
@@ -65,12 +77,12 @@ public class ShipMovement : MonoBehaviour {
         }
         if (level == 3)
         {
-            GameObject newBullet = Instantiate(bullet, fgun.position, fgun.rotation);
+            GameObject newBullet = Instantiate(bullet, ygun.position, ygun.rotation);
             newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * velocity, ForceMode.VelocityChange);
-            GameObject newBullet2 = Instantiate(bullet, fgun.position, Quaternion.AngleAxis(25, Vector3.forward));
-            newBullet2.GetComponent<Rigidbody>().AddForce(transform.forward * velocity, ForceMode.VelocityChange);
-            GameObject newBullet3 = Instantiate(bullet, fgun.position, Quaternion.AngleAxis(-25, Vector3.forward));
-            newBullet3.GetComponent<Rigidbody>().AddForce(transform.forward * velocity, ForceMode.VelocityChange);
+            GameObject newBullet2 = Instantiate(bullet, f1gun.position, f2gun.rotation);
+            newBullet2.GetComponent<Rigidbody>().AddForce(f2gun.forward * velocity, ForceMode.VelocityChange);
+            GameObject newBullet3 = Instantiate(bullet, f2gun.position, f1gun.rotation);
+            newBullet3.GetComponent<Rigidbody>().AddForce(f1gun.forward * velocity, ForceMode.VelocityChange);
         }
     }
 
