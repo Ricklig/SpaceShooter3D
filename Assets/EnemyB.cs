@@ -16,6 +16,7 @@ public class EnemyB : MonoBehaviour {
     float shotsFired = 4.0f;
 
     public GameObject explode;
+    public GameObject smoke;
 
 
     // Use this for initialization
@@ -73,11 +74,13 @@ public class EnemyB : MonoBehaviour {
 
         if (col.gameObject.layer.Equals(14))
         {
-
+            var smk = (GameObject)Instantiate(smoke, transform.position, transform.rotation);
+            smk.transform.parent = transform;
             Destroy(col.gameObject);
             gameObject.GetComponentInParent<EnemyBManager>().sendPos(gameObject.transform.position);
             GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
             //transform.rotation = Quaternion.Euler(0, 0 ,);
+
             gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
 
@@ -97,6 +100,7 @@ public class EnemyB : MonoBehaviour {
         }
         else if (col.gameObject.layer.Equals(4))
         {
+            var boom = (GameObject)Instantiate(explode, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

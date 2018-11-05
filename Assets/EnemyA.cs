@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyA : MonoBehaviour {
 
     public GameObject explode;
+    public GameObject smoke;
 
     // Use this for initialization
     void Start () {
@@ -22,7 +23,8 @@ public class EnemyA : MonoBehaviour {
 
         if (col.gameObject.layer.Equals(14))
         {
-
+            var smk = (GameObject)Instantiate(smoke, transform.position, transform.rotation);
+            smk.transform.parent = transform;
             Destroy(col.gameObject);
             gameObject.GetComponentInParent<EnemyAManager>().sendPos(gameObject.transform.position);
             GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
@@ -46,6 +48,7 @@ public class EnemyA : MonoBehaviour {
         }
         else if (col.gameObject.layer.Equals(4))
         {
+            var boom = (GameObject)Instantiate(explode, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

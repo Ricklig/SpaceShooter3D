@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 114972940359458518}
   m_Layer: 0
   m_Name: BossManager
-  m_TagString: Untagged
+  m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6305,6 +6305,7 @@ MonoBehaviour:
   killBox: {fileID: 4675122638622952}
   zone: {fileID: 1621038637475070, guid: 60974e94f1ad2504e8d23596136ed3f9, type: 2}
   kb: {fileID: 1359452430476630, guid: 05c1a913a6d5ff141a45a87f079a407f, type: 2}
+  explode: {fileID: 1000010608846784, guid: 6747b1742d70743a8aff8594e708b2f7, type: 2}
   currentHealth: 150
   healthBar: {fileID: 224460667718236044}
 --- !u!114 &114575052728912252

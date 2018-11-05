@@ -16,6 +16,8 @@ public class ShipMovement : MonoBehaviour {
     public GameObject camera;
     AudioSource gotDamage;
     AudioSource powerUp;
+    public GameObject explode;
+
 
     // Use this for initialization
     void Start () {
@@ -111,7 +113,7 @@ public class ShipMovement : MonoBehaviour {
         {
             GameObject.FindWithTag("GameController").GetComponent<GameManager>().endGame();
             Destroy(gameObject);
-            //var boom = (GameObject)Instantiate(explode, transform.position, transform.rotation);
+            var boom = (GameObject)Instantiate(explode, transform.position, transform.rotation);
             //var boooom = (GameObject)Instantiate(kaboom, transform.position, transform.rotation);
         }
     }

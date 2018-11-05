@@ -1163,3 +1163,5 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1641914596044988, guid: 17b12ad0a6c9f3c4793c38485957248b,
     type: 2}
   gun: {fileID: 4368305647186994}
+  explode: {fileID: 100000, guid: e0dc4d47bced6d54ab1461804114b5d0, type: 2}
+  smoke: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 2}

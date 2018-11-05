@@ -29,7 +29,7 @@ public class Boss : MonoBehaviour {
     public GameObject zone;
     public GameObject kb;
 
-    //public GameObject explode;
+    public GameObject explode;
     //public GameObject kaboom;
 
     float shotsFired = 2;
@@ -91,7 +91,7 @@ public class Boss : MonoBehaviour {
 
             GameObject.FindWithTag("GameController").GetComponent<GameManager>().endGame();
             Destroy(gameObject);
-            //var boom = (GameObject)Instantiate(explode, transform.position, transform.rotation);
+            var boom = (GameObject)Instantiate(explode, GameObject.FindWithTag("Robot").GetComponent<Transform>().position, GameObject.FindWithTag("Robot").GetComponent<Transform>().rotation);
             //var boooom = (GameObject)Instantiate(kaboom, transform.position, transform.rotation);
         }
         healthBar.sizeDelta = new Vector2(currentHealth,healthBar.sizeDelta.y);
