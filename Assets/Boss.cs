@@ -116,7 +116,7 @@ public class Boss : MonoBehaviour {
 
     void Fire()
     {
-        Vector3 vectorToTarget = GameObject.FindWithTag("Player").GetComponent<Transform>().position - gameObject.transform.position;
+        Vector3 vectorToTarget = GameObject.FindWithTag("Player").GetComponent<Transform>().position - gun.transform.position;
         Vector3 facingDirection = transform.forward; // just for clarity!
 
         float angleInDegrees = Vector3.Angle(facingDirection, vectorToTarget);

@@ -13,6 +13,7 @@ public class ShipMovement : MonoBehaviour {
     public Transform f2gun;
     public int level = 1;
     public float velocity = 100.0f;
+    public GameObject camera;
 
     // Use this for initialization
     void Start () {
@@ -89,6 +90,7 @@ public class ShipMovement : MonoBehaviour {
     public void TakeDamage()
     {
         level--;
+        StartCoroutine(camera.GetComponent<CameraShake>().Shake(0.15f, 0.4f));
         //gotDamage.Play();
         if (level > 0)
         {
@@ -132,5 +134,6 @@ public class ShipMovement : MonoBehaviour {
     {
         Debug.Log("game over");
     }
+
 
 }

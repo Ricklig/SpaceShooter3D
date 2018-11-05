@@ -101,13 +101,17 @@ public class EnemyB : MonoBehaviour {
 
     void Fire()
     {
-        Vector3 vectorToTarget = GameObject.FindWithTag("Player").GetComponent<Transform>().position - gameObject.transform.position;
-        Vector3 facingDirection = transform.forward; // just for clarity!
+        if (GameObject.FindWithTag("Player") != null)
+        {
+            Vector3 vectorToTarget = GameObject.FindWithTag("Player").GetComponent<Transform>().position - gameObject.transform.position;
+            Vector3 facingDirection = transform.forward; // just for clarity!
 
-        float angleInDegrees = Vector3.Angle(facingDirection, vectorToTarget);
-        Quaternion q = Quaternion.FromToRotation(facingDirection, vectorToTarget);
-        var bullet = (GameObject)Instantiate(bulletPrefab, gun.position, q );
-        bullet.GetComponent<Rigidbody>().AddForce(vectorToTarget * 0.5f, ForceMode.VelocityChange);
+            float angleInDegrees = Vector3.Angle(facingDirection, vectorToTarget);
+            Quaternion q = Quaternion.FromToRotation(facingDirection, vectorToTarget);
+            var bullet = (GameObject)Instantiate(bulletPrefab, gun.position, q );
+            bullet.GetComponent<Rigidbody>().AddForce(vectorToTarget * 0.5f, ForceMode.VelocityChange);
+
+        }
 
     }
 

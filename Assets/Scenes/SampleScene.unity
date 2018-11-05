@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43748978, g: 0.48531312, b: 0.56558794, a: 1}
+  m_IndirectSpecularColor: {r: 0.43748927, g: 0.4853124, b: 0.5655868, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -474,6 +475,17 @@ Transform:
   m_Father: {fileID: 770888919}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05da97106f60c4e4cb48d9f1c14f75f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &536055555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1012,7 @@ MonoBehaviour:
   f2gun: {fileID: 1681366198}
   level: 1
   velocity: 100
+  camera: {fileID: 534669902}
 --- !u!54 &1214591658
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1136,7 +1149,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1347612688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.94947726, y: -5, z: 500}
+  m_LocalPosition: {x: 0.94947726, y: -5, z: 490}
   m_LocalScale: {x: 10, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1373,7 +1386,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1442365299}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -15, y: 5, z: 500}
+  m_LocalPosition: {x: -15, y: 5, z: 490}
   m_LocalScale: {x: 1000, y: 20, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1458,7 +1471,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1453553665}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 15, y: 5, z: 500}
+  m_LocalPosition: {x: 15, y: 5, z: 490}
   m_LocalScale: {x: 1000, y: 20, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1905,8 +1918,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2124629665}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -12.57}
-  m_LocalScale: {x: 30, y: 20, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0, z: -14.26}
+  m_LocalScale: {x: 30, y: 40, z: 0.1}
   m_Children: []
   m_Father: {fileID: 770888919}
   m_RootOrder: 2
