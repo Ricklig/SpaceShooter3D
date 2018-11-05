@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //scoreBoard.text = score.ToString();
+       scoreBoard.text = score.ToString();
         if (bossClock > 0)
         {
             bossClock -= Time.deltaTime;

@@ -38,7 +38,7 @@ public class Boss : MonoBehaviour {
 
     const int startingHealth = 150;
     public int currentHealth = startingHealth;
-    //public RectTransform healthBar;
+    public RectTransform healthBar;
 
 
     // Use this for initialization
@@ -94,7 +94,7 @@ public class Boss : MonoBehaviour {
             //var boom = (GameObject)Instantiate(explode, transform.position, transform.rotation);
             //var boooom = (GameObject)Instantiate(kaboom, transform.position, transform.rotation);
         }
-        //healthBar.sizeDelta = new Vector2(currentHealth,healthBar.sizeDelta.y);
+        healthBar.sizeDelta = new Vector2(currentHealth,healthBar.sizeDelta.y);
 
     }
     void OnTriggerEnter(Collider col)
@@ -116,13 +116,18 @@ public class Boss : MonoBehaviour {
 
     void Fire()
     {
-        Vector3 vectorToTarget = GameObject.FindWithTag("Player").GetComponent<Transform>().position - gun.transform.position;
-        Vector3 facingDirection = transform.forward; // just for clarity!
+        if (GameObject.FindWithTag("Player") != null)
+        {
 
-        float angleInDegrees = Vector3.Angle(facingDirection, vectorToTarget);
-        Quaternion q = Quaternion.FromToRotation(facingDirection, vectorToTarget);
-        var bullet = (GameObject)Instantiate(bulletPrefab, gun.position, q);
-        bullet.GetComponent<Rigidbody>().AddForce(vectorToTarget * 0.5f, ForceMode.VelocityChange);
+            Vector3 vectorToTarget = GameObject.FindWithTag("Player").GetComponent<Transform>().position - gun.transform.position;
+            Vector3 facingDirection = transform.forward; // just for clarity!
+
+            float angleInDegrees = Vector3.Angle(facingDirection, vectorToTarget);
+            Quaternion q = Quaternion.FromToRotation(facingDirection, vectorToTarget);
+            var bullet = (GameObject)Instantiate(bulletPrefab, gun.position, q);
+            bullet.GetComponent<Rigidbody>().AddForce(vectorToTarget * 0.5f, ForceMode.VelocityChange);
+        }
+    
 
     }
 

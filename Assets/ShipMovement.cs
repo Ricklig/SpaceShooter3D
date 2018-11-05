@@ -14,11 +14,15 @@ public class ShipMovement : MonoBehaviour {
     public int level = 1;
     public float velocity = 100.0f;
     public GameObject camera;
+    AudioSource gotDamage;
+    AudioSource powerUp;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        AudioSource[] AS = GetComponents<AudioSource>();
+        gotDamage = AS[0];
+        powerUp = AS[1];
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -91,7 +95,7 @@ public class ShipMovement : MonoBehaviour {
     {
         level--;
         StartCoroutine(camera.GetComponent<CameraShake>().Shake(0.15f, 0.4f));
-        //gotDamage.Play();
+        gotDamage.Play();
         if (level > 0)
         {
             if (level == 2)
@@ -115,7 +119,7 @@ public class ShipMovement : MonoBehaviour {
 
     public void LevelUp()
     {
-        //powerUp.Play();
+        powerUp.Play();
         if (level < 3)
         {
             level++;

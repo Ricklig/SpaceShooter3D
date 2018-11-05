@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyA : MonoBehaviour {
 
+    public GameObject explode;
+
     // Use this for initialization
     void Start () {
         
@@ -23,7 +25,7 @@ public class EnemyA : MonoBehaviour {
 
             Destroy(col.gameObject);
             gameObject.GetComponentInParent<EnemyAManager>().sendPos(gameObject.transform.position);
-            //GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
+            GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
             transform.rotation = Quaternion.Euler(0, -1, 0);
             gameObject.GetComponent<Rigidbody>().useGravity = true;
         }

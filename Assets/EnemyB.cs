@@ -14,7 +14,9 @@ public class EnemyB : MonoBehaviour {
     public Transform gun;
 
     float shotsFired = 4.0f;
-    
+
+    public GameObject explode;
+
 
     // Use this for initialization
     void Start()
@@ -74,7 +76,7 @@ public class EnemyB : MonoBehaviour {
 
             Destroy(col.gameObject);
             gameObject.GetComponentInParent<EnemyBManager>().sendPos(gameObject.transform.position);
-            //GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
+            GameObject.FindWithTag("GameController").GetComponent<GameManager>().updateScore(100);
             //transform.rotation = Quaternion.Euler(0, 0 ,);
             gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
