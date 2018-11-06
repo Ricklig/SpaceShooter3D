@@ -91,7 +91,8 @@ public class Boss : MonoBehaviour {
 
             GameObject.FindWithTag("GameController").GetComponent<GameManager>().endGame();
             Destroy(gameObject);
-            var boom = (GameObject)Instantiate(explode, GameObject.FindWithTag("Robot").GetComponent<Transform>().position, GameObject.FindWithTag("Robot").GetComponent<Transform>().rotation);
+            Vector3 temp = new Vector3(0, 0, 10);
+            var boom = (GameObject)Instantiate(explode, GameObject.FindWithTag("Player").GetComponent<Transform>().position + temp , GameObject.FindWithTag("Robot").GetComponent<Transform>().rotation);
             //var boooom = (GameObject)Instantiate(kaboom, transform.position, transform.rotation);
         }
         healthBar.sizeDelta = new Vector2(currentHealth,healthBar.sizeDelta.y);

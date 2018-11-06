@@ -18,6 +18,10 @@ public class ShipMovement : MonoBehaviour {
     AudioSource powerUp;
     public GameObject explode;
 
+    const int startingHealth = 50;
+    public int currentHealth = startingHealth;
+    public RectTransform healthBar;
+
 
     // Use this for initialization
     void Start () {
@@ -38,7 +42,8 @@ public class ShipMovement : MonoBehaviour {
             {
                 Fire();
             }
-        }
+        healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
+    }
 
 
     void OnTriggerEnter(Collider col)
@@ -54,6 +59,14 @@ public class ShipMovement : MonoBehaviour {
         {
             Destroy(col.gameObject);
             LevelUp();
+        }
+        else if (col.gameObject.layer.Equals(4))
+        {
+            TakeDamage();
+        }
+        else if (col.gameObject.layer.Equals(15))
+        {
+            TakeDamage();
         }
     }
 
@@ -96,10 +109,12 @@ public class ShipMovement : MonoBehaviour {
     public void TakeDamage()
     {
         level--;
+        currentHealth -= 50;
         StartCoroutine(camera.GetComponent<CameraShake>().Shake(0.15f, 0.4f));
         gotDamage.Play();
         if (level > 0)
         {
+
             if (level == 2)
             {
                 //GetComponent<SpriteRenderer>().sprite = xwing;
@@ -122,8 +137,10 @@ public class ShipMovement : MonoBehaviour {
     public void LevelUp()
     {
         powerUp.Play();
+
         if (level < 3)
         {
+            currentHealth += 50;
             level++;
             if (level == 2)
             {
